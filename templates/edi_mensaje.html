@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="section-class">
+    <section class="articles">
+        <article>
+
+        </article>
+        <article>
+<h3>
+    <br>
+    <Center> <b> Editar Mensaje</b> </Center>
+
+</h3>
+   <br>
+   <br>
+    <form action="/mensaje_fedita/{{mensaje.0}}" method="post">
+        <div class="container">
+          <div class="form-row">
+               <div class="col-xs-12 ">
+                <div class="mb-3">
+                      <label for="tu_msj" class="form-label"><strong>Ingrese su Mensaje:</strong></label>
+                      <input type="text" class="form-control" name="tu_msj" id="tu_msj" placeholder="mensaje" value="{{mensaje.1}}">
+                </div>
+
+                </div>
+                <br>
+              <center></centerA><button type="submit" class="btn btn-info">Actualizar</button></center>
+              <br>
+          </div>
+    </div>
+
+</form>
+</article>
+</section>
+
+{% endblock %}

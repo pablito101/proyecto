@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="section-class">
+   <section class="articles">
+       <article>
+       </article>
+       <article>
+<h3>
+    <br>
+    <Center> <b> Agregar Mensaje sobre la Pagina </b> </Center>
+
+</h3>
+   <br>
+   <br>
+<form action="/mensaje_fagrega" method="post">
+   <div class="container">
+          <div class="form-row">
+               <div class="col-xs-12 ">
+                <div class="mb-3">
+                      <label for="tu_msj" class="form-label"><strong> Ingrese su Mensaje:</strong></label>
+                      <input type="text" class="form-control" name="tu_msj" id="tu_msj"required></input>
+                </div>
+                </div>
+          </div>
+          <br>
+       <center><button type="submit" class="btn btn-info">Enviar</button></center>
+       <br>
+    </div>
+
+</form>
+</article>
+</section>
+{% endblock %}

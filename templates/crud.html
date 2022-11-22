@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<table class="container text-center" width="100%" border="1" cellpadding="0" bordercolor="#000000">
+    <tbody>
+    <tr>
+    <td color="#00fffb" bgcolor="pink" valign="top">
+      <strong><em><right><h3><a class="link-secondary"  href="/contacto">Agregar  Comentario</a></h3></right></strong></em>
+        <strong><em><center><h3>Comentarios registrados</h3></center></strong></em>
+    <table class="container text-center" width="100%" border="1" cellpadding="0" bordercolor="#000000">
+    <thead>
+      <tr>
+        <strong><em><td color="white" bgcolor="pink">CORREO</td></strong></em>
+          <strong><em><td color="white" bgcolor="pink">TU COMENTARIO</td></strong></em>
+        <td color="white" bgcolor="pink"></td>
+        <td color="white" bgcolor="pink"></td>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in comen %}
+        <tr>
+        <td width="42%">
+           {{i.1}}
+        </td>
+        <td width="42%">
+           {{i.2}}
+        </td>
+        <td bgcolor="pink" width="8%">
+          <strong><em><center><a class="link-light" href="/editar/{{i.0}}" style="...">Editar</a></center></strong></em>
+        </td>
+        <td bgcolor="pink" width="8%">
+          <strong><em><center><a class="link-light" href="/borrar/{{i.0}}" style="...">Borrar</a></center></strong></em>
+        </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+{% endblock %}

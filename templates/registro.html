@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTRO</title>
+     <link rel="stylesheet" type="text/css" href="static/css/empresa.css">
+</head>
+<body>
+<div id="titulo">
+
+{% extends "layout.html" %}
+
+{% block content %}
+ <div class="container">
+       <h1><CENTER> <b> ¡REGISTRATE! </b> </CENTER></h1>
+      <br>
+
+   <CENTER><div class="form-row">
+               <div class="col-xs-12 ">
+                <div class="mb-3">
+        <div id="usuarioos">
+        <p><strong><em>Bienvenidos</p></strong></em>
+        <p><strong><em>Registrate para brindarte un mejor servicio</p></strong></em>
+
+         <form action="/usuarios" method="POST">
+            <strong><em><label for="correo" class="form-label">Escribe tu correo electronico</label></strong></em>
+                  <input type="email" class="form-input" name="correo" id="correo" placeholder="nombre@ejemplo.com">
+                </div>
+                <div class="mb-3">
+                  <strong><em><label for="contrasena" class="form-label">Crea una contraseña</label></strong></em>
+                      <input type="password" class="form-input" name="contrasena" id="contrasena"></input></CENTER>
+                </div>
+                </div>
+          </div>
+    </div>
+             <div class="d-grid gap-2">
+             <CENTER><button type="submit" class="btn btn-outline-secondary">Enviar</button></CENTER>
+
+</form></div>
+
+{% endblock %}
+
+</body>
+</html>

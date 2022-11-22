@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CONTACTANOS</title>
+     <link rel="stylesheet" type="text/css" href="static/css/empresa.css">
+</head>
+<body>
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>
+      <strong><em><CENTER> <b> ¡Contactanos! </b> </CENTER>
+
+</h1>
+   <br>
+   <br>
+   <br>
+<form action="/agrega_comenta" method="post">
+   <div class="container">
+          <div class="form-row">
+               <div class="col-xs-12 ">
+                <div class="mb-3">
+                  <strong><em><label for="correo" class="form-label">Escribe aqui tu correo electronico</label></strong></em>
+                  <strong><em><input type="email" class="form-control" name="correo" id="correo" placeholder="nombre@ejemplo.com"></strong></em>
+                </div>
+                <div class="mb-3">
+                  <strong><em><label for="comentarios" class="form-label">Escribe tu mensaje</label></strong></em>
+                  <strong><em><input type="text" class="form-control" name="comentarios" id="comentarios"></input></strong></em>
+                </div>
+                </div>
+          </div>
+    </div>
+    <CENTER><button type="submit" class="btn btn-outline-secondary">Enviar</button></CENTER>
+</form>
+{% endblock %}
+</body>
+</html>

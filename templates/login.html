@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="static/css/empresa.css">
+</head>
+<body>
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+   <div id="usuarioos">
+  <center><p>INICIAR SESION!</p></center>
+   <form action="/iniciar_sesion" method="post">
+<div class="container">
+    <div class="form-row">
+         <div class="col-xs-12 ">
+          <div class="mb-3">
+              <p>!Inicia sesión para una mejor experiencia!</p>
+                <label for="correo" class="form-label">Escribe aqui tu correo electronico</label>
+                <input type="email" class="form-control" name="correo" id="correo" placeholder="nombre@ejemplo.com">
+          </div>
+          <div class="mb-3">
+                <label for="contrasena" class="form-label">Escribe tu contraseña</label>
+                <input type="password" class="form-control" name="contrasena" id="contrasena"></input>
+          </div>
+          </div>
+    </div>
+</div>
+       <br>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form></div>
+
+{% endblock %}
+
+
+</body>
+
+</html>
